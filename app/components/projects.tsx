@@ -36,6 +36,14 @@ const projectList = [
     },
     {
         id: 5,
+        title: "Pok&#233;mon Infinite Fusion Team Planner",
+        description: "Next.js application allowing users to plan their team...",
+        imageUrl: "/images/projects/team-planner.png",
+        readMoreUrl: "",
+        gitUrl: "https://github.com/connellboyce/infinite-fusion-team-planner",
+    },
+    {
+        id: 6,
         title: "Personal Minecraft Server",
         description: "A Minecraft server running on AWS infrastructure...",
         imageUrl: "/images/projects/minecraft_server.png",
