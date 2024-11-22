@@ -7,20 +7,24 @@ import MenuOverlay from "@/app/components/menu-overlay";
 
 const navLinks = [
     {
+        title: "Home",
+        href: "/"
+    },
+    {
         title: "About",
-        href: "#about"
+        href: "/#about"
     },
     {
         title: "Projects",
-        href: "#projects"
+        href: "/#projects"
     },
     {
         title: "Contact",
-        href: "#contact"
+        href: "/#contact"
     },
     {
         title: "Resume",
-        href: "#resume"
+        href: "/resume"
     },
 ]
 
