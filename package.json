@@ -1,6 +1,7 @@
 {
   "name": "connellboyce.com",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "description": "Connell Boyce's personal website and portfolio",
   "private": true,
   "scripts": {
     "dev": "next dev",
