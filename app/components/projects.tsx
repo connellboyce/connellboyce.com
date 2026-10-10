@@ -57,7 +57,7 @@ const Projects = () => {
         <div>
             <h1 className="text-center text-4xl font-bold mt-4 mb-4"><span className="text-[#f9004d]">my</span> projects</h1>
             <div className="grid md:grid-cols-3 gap-8 md:gap-12">
-                {projectList.map((project) => <ProjectCard key={project.id} title={project.title} description={project.description} imageUrl={project.imageUrl} gitUrl={project.gitUrl} readMoreUrl={project.readMoreUrl} />)}
+                {projectList.map((project) => <ProjectCard key={project.id} title={project.title} description={project.description} imageUrl={project.imageUrl} gitUrl={project.gitUrl} readMoreUrl={project.readMoreUrl} liveUrl="" />)}
             </div>
         </div>
     )

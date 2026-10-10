@@ -1,6 +1,6 @@
 import Curtain from "@/app/components/curtain";
 import Navbar from "@/app/components/navbar";
-import Footer from "@/app/components/footer";
+import Footer from "@/app/components/Footer";
 import Head from "next/head";
 import React from "react";
 import ResumeDownloadButton from "@/app/components/resume/resume-download-button";

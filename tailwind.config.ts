@@ -8,7 +8,7 @@ const config: Config = {
   ],
   theme: {
     fontFamily: {
-      sans: ['"Josefin Sans"', 'sans-serif']
+      sans: ["var(--font-josefin)", "sans-serif"]
     },
     extend: {
       backgroundImage: {
