@@ -19,6 +19,16 @@ export const postType = defineType({
       },
     }),
     defineField({
+      name: 'description',
+      type: 'text',
+      rows: 3,
+      description: 'Short summary shown on blog cards, in the RSS feed, and in search/social previews.',
+      validation: (Rule) => [
+        Rule.required().warning('A description is recommended for cards and the RSS feed.'),
+        Rule.max(200).warning('Keep descriptions under 200 characters so they fit on cards.'),
+      ],
+    }),
+    defineField({
       name: 'author',
       type: 'reference',
       to: {type: 'author'},
