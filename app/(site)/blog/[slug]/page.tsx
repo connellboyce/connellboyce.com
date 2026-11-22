@@ -36,7 +36,14 @@ const POST_SLUGS_QUERY = `*[_type == "post" && defined(slug.current)]{ "slug": s
 const getPost = (slug: string) => client.fetch<Post | null>(POST_QUERY, { slug });
 
 export async function generateStaticParams() {
-    return client.fetch<{ slug: string }[]>(POST_SLUGS_QUERY);
+    // If Sanity is unreachable at build time (e.g. CI with placeholder credentials),
+    // skip prerendering; posts are rendered on demand instead.
+    try {
+        return await client.fetch<{ slug: string }[]>(POST_SLUGS_QUERY);
+    } catch (error) {
+        console.error("Failed to fetch post slugs from Sanity; skipping prerender:", error);
+        return [];
+    }
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
