@@ -13,6 +13,11 @@ const josefinSans = Josefin_Sans({
 export const metadata: Metadata = {
   title: "Connell Boyce",
   description: "Full Stack Developer, always learning!",
+  alternates: {
+    types: {
+      "application/rss+xml": [{ url: "/feed.xml", title: "Connell Boyce" }],
+    },
+  },
 };
 
 const navItems = [
@@ -45,9 +50,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${josefinSans.variable} font-sans`}>
+      <body className={`${josefinSans.variable} flex min-h-dvh flex-col font-sans`}>
         <Header navItems={navItems} />
-        {children}
+        <div className="flex flex-1 flex-col">{children}</div>
         <Footer />
       </body>
     </html>
